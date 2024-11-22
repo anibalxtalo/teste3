@@ -23,7 +23,7 @@ class CustomCard extends HTMLElement {
             <style>
                 :host {
                     display: block;
-                    width: calc(100% - 20px); /* Ajuste de largura */
+                    width: calc(100% - 20px);
                     margin: 10px auto;
                     height: ${cardHeight};
                     background-color: #f4f4f4;
