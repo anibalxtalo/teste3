@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components</title>
+    <script src="./custom-card.js" type="module"></script>
+    <script src="./configModule.js" type="module"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <button class="settings-btn" onclick="loadModule('config')" aria-label="Configurações">
+                <span class="material-icons">settings</span>
+            </button>
+        </div>
+
+        <!-- Dynamic Content -->
+        <div class="content" id="dynamic-content"></div>
+    </div>
+
+    <script>
+        function loadModule(moduleName) {
+            if (moduleName === 'config') {
+                import('./configModule.js').then((module) => module.renderConfigModule());
+            }
+        }
+    </script>
+</body>
+</html>
